@@ -1,0 +1,14 @@
+language: generic
+dist: xenial
+sudo: required
+script:
+- bash ci-test.sh
+deploy:
+  provider: releases
+  skip_cleanup: true
+  api_key:
+    secure: Ahp0oMz+eYtCQl3DsezowzeDmUwZGTay/LVFo5wmQlqFvsAmSEEosAD/WpHPXqqVkaiaKqMaz8RBHNP3RVdDRSGUmrrNBdGmSQ9LYyLKjv44cXJrBQrYfvvsJKbNmHM+V/ROLm8L/DWkenlTSuc/FYAxfEVzbNEEfqNBCTFYW6Z4bffzRxq1mPyfDyV4vZQGa4uB7ZAU0Y+5q1Nm8JtswTexzyqxhSrtwgw+Dhxw0nQT/18wt0su3TM5d5jgMWvppjnCiBrGm0KPX6gEaf+9wS2N9JRIiMqxrHsKKKzizQNDyfwkB2xx/gzF4NkAkQa+2bczAueT1ZecLU9lWH0HGt98nXn7c01U5b80urIlzYFT8/SHU7ex1okIwBwAwyuVezyzhLYp+ssW8VR4lpw4J3Fvx6nFrybAvGrRehe2VSvO4RwwQ3AOQQ3bQK8JLfzpSDQDPcf2k4iRw6pv7jNvpzKx1FpSZiBWUemYMGndJaI0xZAjhmHX8BfWCctetr9oid/ffdllX81D4bi3qTUUuc5Qh7bKy0sIEPSLslxHbODz93HtqMRhHdkvYqbAfUb/zN+eff7n6l6IcmoE0g6ayB3fsdFkv4ffUHo9T6AzmqGrESP8i+NJtuA1OVuvXqqJyBzRWDxNC5WyI08ltg2uKMbjbD2h3c+Uwam7F8sj8/E=
+  file: print-hello.sh
+  on:
+    repo: sharabinth/shell-test
+    tags: true
